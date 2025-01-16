@@ -27,4 +27,5 @@ h1 {
     background: goldenrod;
     display: inline-block;
     margin: 5px;
+    cursor: pointer;
 }

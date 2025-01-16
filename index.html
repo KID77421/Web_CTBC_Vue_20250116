@@ -32,6 +32,12 @@
         <ul>
             <li v-for="skill in web">{{ skill }}</li>
         </ul>
+
+        <h1>五、v-on 事件</h1>
+        <div class="btn" v-on:click="count++">點我</div>
+        <h3>數字：{{ count }}</h3>
+        <div class="btn" v-on:mouseover="count++">滑我</div>
+        <h3>數字：{{ count }}</h3>
     </div>
 
     <!-- 在安裝的元素外無法使用資料 -->

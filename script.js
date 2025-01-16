@@ -13,7 +13,8 @@ const app = Vue.createApp({
             canBuy: false,
             web: [
                 "HTML", "CSS", "Javascript", "jQuery", "Vue", "React", "Angular", "Git"
-            ]
+            ],
+            count: 0
         }
     }
 });
