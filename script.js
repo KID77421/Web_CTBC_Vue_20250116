@@ -7,7 +7,13 @@ const app = Vue.createApp({
         // 資料物件
         return {
             // 第一個文字: 值
-            firstText: "嗨，這是 Vue 的資料！"
+            firstText: "嗨，這是 Vue 的資料！",
+            textColor: "red",
+            fontSize: 24,
+            canBuy: false,
+            web: [
+                "HTML", "CSS", "Javascript", "jQuery", "Vue", "React", "Angular", "Git"
+            ]
         }
     }
 });
