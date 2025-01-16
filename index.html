@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>認識 Vue.js 框架 </title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <div id="app">
+        <h1>一、認識 Vue 使用流程</h1>
+        <p>
+            {{ firstText }} {{ firstText }}
+        </p>
+    </div>
+
+    <!-- 在安裝的元素外無法使用資料 -->
+    <div>
+        {{ firstText }} 
+    </div>
+
+    <!-- Vue.js CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
