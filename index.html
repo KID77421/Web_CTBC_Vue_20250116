@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>認識 Vue.js 框架 </title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    
+
     <div id="app">
         <h1>一、認識 Vue 使用流程</h1>
         <p>
             {{ firstText }} {{ firstText }}
         </p>
-        
+
         <h1>二、使用 v-bind</h1>
         <p v-bind:class="textColor">這個段落的類別使用 Vue 的 v-bind 綁定。</p>
         <div v-bind:class="textColor">這個區塊也是使用 v-bind</div>
@@ -38,15 +40,29 @@
         <h3>數字：{{ count }}</h3>
         <div class="btn" v-on:mouseover="count++">滑我</div>
         <h3>數字：{{ count }}</h3>
+        <div class="btn" @:click="count++">事件簡寫：點我</div>
+        <h3>數字：{{ count }}</h3>
+        <div class="btn" @:click.once="count++">點擊一次事件</div>
+        <h3>數字：{{ count }}</h3>
+        <div class="btn" @:click.right="count++">點擊右鍵事件</div>
+        <h3>數字：{{ count }}</h3>
+
+        <h1>六、 Vue 方法(函式)</h1>
+        <p>Vue 的 method 等於 function，記得開主控台 (Ctrl + Shift + I) 查看測試的訊息。</p>
+        <div class="btn" @:click="test">點擊後會呼叫測試方法</div>
+        <div class="btn" @:click="methodEvent">點擊後會獲得點擊事件的資料</div>
+        <div class="btn" @:click="getPoint($event)">點擊後儲存座標</div>
+        <p>點擊後的座標：{{ pointX }}, {{ pointY }}</p>
     </div>
 
     <!-- 在安裝的元素外無法使用資料 -->
     <div>
-        {{ firstText }} 
+        {{ firstText }}
     </div>
 
     <!-- Vue.js CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./script.js"></script>
 </body>
+
 </html>
