@@ -30,3 +30,8 @@ h1 {
     cursor: pointer;
     color: #252525;
 }
+
+input,
+button {
+    color: #252525;
+}
